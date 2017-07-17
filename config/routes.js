@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -46,4 +46,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  //user
+  'POST /post': 'PostController.create',
+  'GET /posts': 'PostController.findAll',
+  'GET /posts/:id': 'PostController.findOne',
+  'DELETE /posts/:id': 'PostController.delete',
+  'PUT /posts/:id': 'PostController.update'
 };
