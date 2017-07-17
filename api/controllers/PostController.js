@@ -56,9 +56,17 @@ module.exports = {
    * `PostController.findAll()`
    */
   findAll: function (req, res) {
-    return res.json({
-      todo: 'findAll() is not implemented yet!'
-    });
+    Post.find()
+      .populate('user')
+      .populate('category')
+      .then(_posts => {
+        if (!_posts || _posts.length === 0) {
+          throw new Error('No posts found');
+        }
+
+        return res.ok(_posts)
+      })
+      .catch(err => res.serverError(err.message));
   },
 
 
@@ -66,9 +74,19 @@ module.exports = {
    * `PostController.findOne()`
    */
   findOne: function (req, res) {
-    return res.json({
-      todo: 'findOne() is not implemented yet!'
-    });
+    let postId = req.params.id;
+
+    if (!postId) return res.badRequest({err: 'missing post id'});
+
+    Post.findOne({id: postId})
+      .populate('category')
+      .populate('user')
+      .then(_post => {
+        if (!_post) return res.notFound({err: 'No post found'});
+
+        res.ok(_post)
+      })
+      .catch(err => res.serverError(err.message));
   },
 
 
@@ -76,9 +94,16 @@ module.exports = {
    * `PostController.delete()`
    */
   delete: function (req, res) {
-    return res.json({
-      todo: 'delete() is not implemented yet!'
-    });
+    let postId = req.params.id;
+    if (!postId) return res.badRequest({err: 'Post_id is missing'});
+
+    Post.destroy({id: postId})
+      .then(_post => {
+        if (!_post || _post.length === 0) return res.notFound({ err: 'No post found in our record' });
+
+        res.ok(`Post is deleted with id: ${postId}`);
+      })
+      .catch(err => res.serverError(err.message));
   },
 
 
@@ -86,9 +111,34 @@ module.exports = {
    * `PostController.update()`
    */
   update: function (req, res) {
-    return res.json({
-      todo: 'update() is not implemented yet!'
-    });
+    //Get Params
+    let title = req.param('title'),
+      content = req.param('content'),
+      userId = req.param('user_id'),
+      cateId = req.param('category_id'),
+      postId = req.params.id;
+
+    //Check Params
+    if (!postId) return res.badRequest({err: 'Post_id is missing'});
+    if (!title) return res.badRequest('Invalid title');
+    if (!content) return res.badRequest('Invalid content');
+    if (!userId) return res.badRequest('Invalid userId');
+    if (!cateId) return res.badRequest('Invalid cateId');
+
+    let post = {
+      title: title,
+      content: content,
+      user: userId,
+      category: cateId
+    };
+
+    Post.update({id: postId, post})
+      .then(_post => {
+        if (!_post[0] || _post[0].length === 0) return res.notFound({ err: 'No post found' });
+
+        return res.ok(_post);
+      })
+      .catch(err => res.serverError(err.message));
   }
 };
 
