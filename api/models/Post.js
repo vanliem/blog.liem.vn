@@ -5,6 +5,6 @@ module.exports = {
     title: {type: 'string', required: true},
     content: {type: 'longtext', required: true},
     category: {model: 'category', columnName: 'category_id', required: true},
-    user: {model: 'user', columnName: 'user_id', require: true}
+    user: {model: 'user', columnName: 'user_id', required: true}
   }
 };
