@@ -32,10 +32,18 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  },
+  // '/': {
+  //   view: 'homepage'
+  // },
+  // Homepage
+  '/GET /': 'HomeController.index',
+  '/GET /home': 'HomeController.index',
 
+
+  //Post
+
+
+  // Category
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
