@@ -1,94 +1,103 @@
 <!DOCTYPE html>
-<html ng-app="todoApp">
-  <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+<html lang="en">
+<head>
 
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-    <!--
-        Stylesheets and Preprocessors
-        ==============================
-
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
-
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
-  </head>
-
-  <body>
-    <%- body %>
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+   <title><%=typeof title == 'undefined' ? 'Blog' : title%></title>
 
 
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!--
-        Client-side Templates
-        ========================
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.html">
+	
+	<!-- CSS
+	================================================== -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Unite gallery -->
+	<link rel="stylesheet" href="css/unite-gallery.css">
 
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
+</head>
+	
+<body>
 
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
+	<div class="body-inner">
+	
+	<!-- Begin Topbar -->
+	<%- partial('./partials/top_bar.ejs') %>
+	<!--/ Topbar end -->
 
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
+	<!-- Header start -->
+	<%- partial('./partials/header.ejs') %>
+	<!--/ Header end -->
+	
+	<!-- Navigation start -->
+	<%- partial('./partials/navigation.ejs') %>
+	<!--/ Navigation end -->
 
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
+	<!-- Carousel -->
+	<%- partial('./partials/carousel.ejs') %>
+	<!--/ Carousel end -->  
+	
+	<!-- Begin Trending -->
+	<%- partial('./partials/trending.ejs') %>
+	<!--/ Trending end -->
 
+   <!-- Begin Blog -->
+   	<%- partial('./partials/blog_content.ejs') %>
+   <!--/ Blog end -->
 
-    <!--
+	<!-- Begin Featured carousel -->
+   	<%- partial('./partials/featured.ejs') %>
+	<!--/ Featured carousel end -->
+	
+	<!-- Begin Instagram -->
+	<%- partial('./partials/no_padding.ejs') %>
+	<!-- Instagram end -->
+	
+	<!-- Begin Footer -->
+	<%- partial('./partials/footer.ejs') %>
+	<!-- Footer end -->
+	
+	<!-- Javascript Files
+	================================================== -->
 
-      Client-side Javascript
-      ========================
-
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
-
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
-
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
-
-    -->
-
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
-  </body>
+	<!-- initialize jQuery Library -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<!-- Bootstrap jQuery -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- Owl Carousel -->
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<!-- Unite Gallery -->
+	<script type="text/javascript" src="js/unitegallery.min.js"></script>
+	<script type="text/javascript" src="js/ug-theme-tiles.js"></script>
+	<!-- Template custom -->
+	<script type="text/javascript" src="js/custom.js"></script>
+	
+	</div>
+	<!-- Body inner end -->
+</body>
 </html>

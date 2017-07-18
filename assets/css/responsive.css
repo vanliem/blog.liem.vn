@@ -1,0 +1,308 @@
+/* Responsive styles
+================================================== */
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px) {
+
+
+	
+}
+
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px) {
+
+
+	.dropdown i{
+		display: none;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media (min-width : 768px) and (max-width: 991px) {
+
+	/* Top bar */
+
+	.top-social{
+		padding: 0;
+		text-align: center;
+	}
+
+	.logo{
+		margin: 30px 0;
+	}
+
+	.top-ad{
+		text-align: center;
+	}
+	
+
+	/* Navigation */
+
+	ul.navbar-nav > li{
+		padding: 0 12px;
+	}
+
+	ul.navbar-nav > li > a {
+		padding: 21px 5px;
+		font-size: 12px;
+	}
+
+	ul.navbar-nav > li:last-child a{
+		padding-right: 8px;
+	}
+
+	.dropdown-menu li a{
+		font-size: 11px;
+	}
+
+	/* Main slider */
+
+	#main-slide .item:before{
+		width: 30%;
+	}
+
+	.slider-content{
+		width: 75%;
+	}
+
+	/* Blog listing */
+
+	article.list-post-right .list-post-inwrap,
+	article.list-post-left .list-post-inwrap{
+		margin: 0;
+	}
+
+	/* Pagination */
+
+	.pagination li a{
+		margin: 10px 0;
+	}
+
+	.pagination li:first-child,
+	.pagination li:last-child{
+		display: block;
+	}
+
+	/* Sidebar */
+
+	.sidebar{
+		margin-top: 40px;
+	}
+
+	/* Footer */
+
+	.footer-social a{
+		margin: 20px 0;
+	}
+
+
+
+}
+
+/* Small Devices Potrait */
+@media (max-width : 767px){
+
+
+	/* Top bar */
+
+	.top-social{
+		padding: 0;
+		text-align: center;
+	}
+
+	.top-social li a {
+    	width: 40px;
+    	height: 40px;
+    	line-height: 40px;
+    }
+	.logo{
+		margin: 30px 0;
+	}
+
+	.logo img{
+		background-size: contain;
+		width: 270px;
+	}
+
+	.top-ad{
+		text-align: center;
+	}
+
+
+	/* Header */
+
+	.navbar-brand{
+		float: none;
+		display: inline-block;
+	}
+
+	/* Navigation */
+
+	.ts-mainnav{
+		min-height: 65px;
+	}
+
+	/* Navigation */
+
+	.navbar-fixed{
+		position: relative;
+		animation:none;
+	}
+
+	.site-nav-inner{
+		text-align: left;
+	}
+
+	ul.navbar-nav > li{
+		display: block;
+		padding-left: 40px;
+	}
+
+	ul.navbar-nav > li > a{
+		padding: 10px 0;
+	}
+
+	ul.navbar-nav > li:after{
+		background: none;
+		position: relative;
+	}
+
+	ul.navbar-nav > li:hover > a:before, 
+	ul.navbar-nav > li.active > a:before{
+		position: relative;
+		border-width: 0;
+		margin-left: 0;
+	}
+
+	ul.navbar-nav > li:hover > a:after, 
+	ul.navbar-nav > li.active > a:after{
+		background: none;
+		height: 0;
+	}
+
+	.navbar-collapse{
+		background: #333333;
+	}
+
+	.navbar-collapse ul.navbar-nav > li > a{
+		color: #fff;
+	}
+
+	.navbar-collapse ul.navbar-nav > li.active > a,
+	.navbar-collapse ul.navbar-nav > li:hover > a{
+		color: #ed485c;
+	}
+
+	/* Main slider */
+	#main-slide .item{
+		min-height: 450px;
+	}
+
+	#main-slide .item:before{
+		width: 30%;
+	}
+
+	.slider-content{
+		width: 75%;
+	}
+
+	.slider-content .post-cat{
+		font-size: 16px;
+	}
+
+	.slider-content .post-cat:before{
+		height: 16px;
+    	top: 2px;
+    	width: 4px;
+    	left: 5px;
+	}
+
+	.slider-content .entry-title{
+		font-size: 20px;
+    	line-height: 30px;
+	}
+
+	.slider-content .btn.btn-primary{
+		font-size: 10px;
+		padding: 6px 10px;
+	}
+
+	.box-slider .slider-content .entry-title{
+		margin: 10px 0;
+		line-height: 26px;
+	}
+
+
+	/* Blog listing */
+
+	article.list-post-right .list-post-inwrap,
+	article.list-post-left .list-post-inwrap{
+		margin: 0;
+	}
+
+	.entry-header .entry-title{
+		font-size: 20px;
+	}
+
+	.post-quote-content .entry-title{
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	/* Pagination */
+
+	.pagination li a{
+		margin: 10px 0;
+	}
+
+	.pagination li:first-child,
+	.pagination li:last-child{
+		display: block;
+	}
+
+	/* Sidebar */
+
+	.sidebar{
+		margin-top: 40px;
+	}
+
+	/* Footer */
+
+	.footer-social a{
+		margin: 20px 0;
+	}
+	
+
+	/* Single post */
+
+	.comments-reply{
+		margin-left: 15px;
+	}
+
+	.comments-form{
+		margin-bottom: 30px;
+	}
+
+	/* Pages */
+
+	#contact-form input.form-control {
+    	width: 100%;
+	}
+
+	
+}
+
+/* Extra Small Devices, Phones */ 
+@media (max-width : 479px) {
+
+
+}
+
+/* Custom, iPhone Retina */ 
+@media (max-width : 320px) and (max-width: 478px)  {
+
+
+
+}
