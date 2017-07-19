@@ -7,10 +7,12 @@ module.exports = {
   attributes: {
   	id: { type: 'integer', unique: true, primaryKey: true },
     title: { type: 'string', required: true },
-    articles: { collection: 'article', via: 'category_id' },
     created_at: { type: 'datetime', notNull: true },
     updated_at: { type: 'datetime' },
     deleted_at: { type: 'datetime' },
+
+    //Relationship
+    articles: { collection: 'article', via: 'category_id' },
 
     beforeCreate: function (values, next) {
       values.created_at = new Date();
