@@ -1,8 +1,25 @@
 module.exports = {
   tableName: 'categories',
+  autoPK: true,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
 
   attributes: {
-    name: {type: 'string', unique: true, required: true},
-    posts: {collection: 'post', via: 'category'}
+  	id: { type: 'integer', unique: true, primaryKey: true },
+    title: { type: 'string', required: true },
+    articles: { collection: 'article', via: 'category_id' },
+    created_at: { type: 'datetime', notNull: true },
+    updated_at: { type: 'datetime' },
+    deleted_at: { type: 'datetime' },
+
+    beforeCreate: function (values, next) {
+      values.created_at = new Date();
+      next();
+    },
+
+    beforeUpdate: function (values, next) {
+      values.updated_at = new Date();
+      next();
+    }
   }
 };

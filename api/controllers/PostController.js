@@ -14,7 +14,7 @@ module.exports = {
    * `PostController.create()`
    */
   create: function (req, res) {
-    //Get Params
+   /* //Get Params
     let title = req.param('title'),
       content = req.param('content'),
       userId = req.param('user_id'),
@@ -48,7 +48,7 @@ module.exports = {
 
         return res.json({post: _post});
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   },
 
 
@@ -56,7 +56,7 @@ module.exports = {
    * `PostController.findAll()`
    */
   findAll: function (req, res) {
-    Post.find()
+    /*Post.find()
       .populate('user')
       .populate('category')
       .then(_posts => {
@@ -66,7 +66,7 @@ module.exports = {
 
         return res.ok(_posts)
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   },
 
 
@@ -74,7 +74,7 @@ module.exports = {
    * `PostController.findOne()`
    */
   findOne: function (req, res) {
-    let postId = req.params.id;
+    /*let postId = req.params.id;
 
     if (!postId) return res.badRequest({err: 'missing post id'});
 
@@ -86,7 +86,7 @@ module.exports = {
 
         res.ok(_post)
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   },
 
 
@@ -94,7 +94,7 @@ module.exports = {
    * `PostController.delete()`
    */
   delete: function (req, res) {
-    let postId = req.params.id;
+    /*let postId = req.params.id;
     if (!postId) return res.badRequest({err: 'Post_id is missing'});
 
     Post.destroy({id: postId})
@@ -103,7 +103,7 @@ module.exports = {
 
         res.ok(`Post is deleted with id: ${postId}`);
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   },
 
 
@@ -111,7 +111,7 @@ module.exports = {
    * `PostController.update()`
    */
   update: function (req, res) {
-    //Get Params
+    /*//Get Params
     let title = req.param('title'),
       content = req.param('content'),
       userId = req.param('user_id'),
@@ -138,7 +138,7 @@ module.exports = {
 
         return res.ok(_post);
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   }
 };
 
