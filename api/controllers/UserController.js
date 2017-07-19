@@ -9,7 +9,7 @@
 
 module.exports = {
 	create: function (req, res) {
-	  let firstName = req.param('first_name'),
+	  /*let firstName = req.param('first_name'),
       lastName = req.param('last_name'),
       age = req.param('age');
 
@@ -29,7 +29,7 @@ module.exports = {
         if (!_user) return res.serverError({err: 'can not create user'});
           return res.ok(_user);
       })
-      .catch(err => res.serverError(err.message));
+      .catch(err => res.serverError(err.message));*/
   }
 };
 
