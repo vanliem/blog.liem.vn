@@ -13,10 +13,12 @@ module.exports = {
 
   attributes: {
     id: { type: 'integer', primaryKey: true },
-    articles: { collection: 'article', via: 'tag_id', through: 'articletag' },
     tag_name: { type: 'string', notNull: true, required: true },
-    created_at: { type: 'datetime', notNull: true},
-    updated_at: { type: 'datetime' }
+    created_at: { type: 'datetime', notNull: true },
+    updated_at: { type: 'datetime' },
+
+    //Relationship
+    articles: { collection: 'article', via: 'tag_id', through: 'articletag' }
   },
 
   beforeCreate: function (values, next) {

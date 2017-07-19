@@ -1,10 +1,3 @@
-/**
- * Author.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
-
 module.exports = {
   tableName: 'authors',
   autoPK: true,
@@ -13,11 +6,13 @@ module.exports = {
 
   attributes: {
     id: { type: 'integer', primaryKey: true },
-    user_id: { model: 'user', unique: true },
     introduction: { type: 'text', notNull: true, required: true },
     created_at: { type: 'datetime', notNull: true},
     updated_at: { type: 'datetime' },
-    deleted_at: { type: 'datetime' }
+    deleted_at: { type: 'datetime' },
+
+    //Relationship
+    user_id: { model: 'user', unique: true },
   },
 
   beforeCreate: function (values, next) {

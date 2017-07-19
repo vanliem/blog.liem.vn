@@ -1,10 +1,3 @@
-/**
- * User.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
-
 module.exports = {
   tableName: 'users',
   autoPK: true,
@@ -24,14 +17,13 @@ module.exports = {
 
     //Relationship
     articles: { collection: 'article', via: 'user_id'},
-    author: { collection: 'author', via: 'user_id'},
+    pony: { model: 'author' },
     comments: { collection: 'comment', via: 'user_id', through: 'commentarticle' },
   },
 
   beforeCreate: function (values, next) {
     values.created_at = new Date();
-    //hash_password
-    //bcrypt.hash()
+
     next();
   },
 
