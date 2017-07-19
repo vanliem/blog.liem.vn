@@ -12,7 +12,7 @@ module.exports = {
 
   attributes: {
     id: { type: 'integer', primaryKey: true },
-    parent_id: { collection: 'user', via: 'id' },
+    parent_id: { type: 'integer' },
     content: { type: 'string', notNull: true, required: true },
     status: { type: 'boolean', defaultsTo: COMMENT_STATUS[0].hide , notNull: true },
     created_at: { type: 'datetime', notNull: true},
@@ -29,5 +29,5 @@ module.exports = {
     values.updated_at = new Date();
     next();
   }
-};
 
+};
