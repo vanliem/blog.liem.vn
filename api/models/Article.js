@@ -22,8 +22,8 @@ module.exports = {
     deleted_at: { type: 'datetime' },
 
     //Relationship
-    category_id: { model: 'category', notNull: true, required: true },
-    user_id: { model: 'user', notNull: true, required: true },
+    category: { model: 'category', columnName: 'category_id', notNull: true, required: true },
+    user: { model: 'user', columnName: 'user_id', notNull: true, required: true },
     tags: { collection: 'tag', via: 'article_id', through: 'articletag' },
     comments: { collection: 'comment', via: 'article_id', through: 'commentarticle' },
     medias: { collection: 'media', via: 'article_id' },
@@ -34,22 +34,22 @@ module.exports = {
       title: faker.lorem.sentence(),
       short_description: faker.lorem.paragraph(),
       description: faker.lorem.paragraph(),
-      category_id: faker.random.arrayElement([1,2]),
-      user_id: faker.random.arrayElement([1,2])
+      category: faker.random.arrayElement([1, 2]),
+      user: faker.random.arrayElement([1, 2, 3])
     },
     {
       title: faker.lorem.sentence(),
       short_description: faker.lorem.paragraph(),
       description: faker.lorem.paragraph(),
-      category_id: faker.random.arrayElement([1,2]),
-      user_id: faker.random.arrayElement([1,2])
+      category: faker.random.arrayElement([1, 2]),
+      user: faker.random.arrayElement([1, 2, 3])
     },
     {
       title: faker.lorem.sentence(),
       short_description: faker.lorem.paragraph(),
       description: faker.lorem.paragraph(),
-      category_id: faker.random.arrayElement([1,2]),
-      user_id: faker.random.arrayElement([1,2])
+      category: faker.random.arrayElement([1, 2]),
+      user: faker.random.arrayElement([1, 2, 3])
     }
   ],
 

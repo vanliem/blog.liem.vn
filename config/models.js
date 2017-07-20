@@ -27,8 +27,8 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  //migrate: 'alter'
-  migrate: 'drop',
+  //migrate: 'saf' //production
+  migrate: 'drop', //development
 
   //Seed data into database
   seed: function (callback) {
