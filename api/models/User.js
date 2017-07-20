@@ -1,3 +1,7 @@
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
+var faker = require('faker');
+
 module.exports = {
   tableName: 'users',
   autoPK: true,
@@ -21,10 +25,39 @@ module.exports = {
     comments: { collection: 'comment', via: 'user_id', through: 'commentarticle' },
   },
 
+  seedData: [
+    {
+      email: faker.internet.email(),
+      full_name: faker.name.findName('Example'),
+      password: 123456,
+      last_login: new Date(),
+      ip: faker.internet.ip()
+    },
+    {
+      email: faker.internet.email(),
+      full_name: faker.name.findName('Example'),
+      password: 123456,
+      last_login: new Date(),
+      ip: faker.internet.ip()
+    },
+    {
+      email: 'vanliem2204@gmail.com',
+      full_name: 'Le Van Liem',
+      password: 123456,
+      last_login: new Date(),
+      ip: faker.internet.ip()
+    },
+  ],
+
   beforeCreate: function (values, next) {
     values.created_at = new Date();
 
-    next();
+    bcrypt.hash(values.password, saltRounds, function (err, hash) {
+      if (err) return next(err);
+      values.password = hash;
+
+      next();
+    });
   },
 
   beforeUpdate: function (values, next) {

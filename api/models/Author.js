@@ -1,3 +1,5 @@
+var faker = require('faker');
+
 module.exports = {
   tableName: 'authors',
   autoPK: true,
@@ -14,6 +16,13 @@ module.exports = {
     //Relationship
     user_id: { model: 'user', unique: true },
   },
+
+  seedData: [
+    {
+      introduction: faker.lorem.paragraph(),
+      user_id: 3
+    },
+  ],
 
   beforeCreate: function (values, next) {
     values.created_at = new Date();

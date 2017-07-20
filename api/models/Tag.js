@@ -1,9 +1,4 @@
-/**
- * Tag.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
+var faker = require('faker');
 
 module.exports = {
   tableName: 'tags',
@@ -20,7 +15,12 @@ module.exports = {
     //Relationship
     articles: { collection: 'article', via: 'tag_id', through: 'articletag' }
   },
-
+  seedData: [
+    { tag_name: faker.lorem.sentence() },
+    { tag_name: faker.lorem.sentence() },
+    { tag_name: faker.lorem.sentence() },
+    { tag_name: faker.lorem.sentence() },
+  ],
   beforeCreate: function (values, next) {
     values.created_at = new Date();
     next();

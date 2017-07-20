@@ -1,3 +1,4 @@
+var faker = require('faker');
 const ARTICLE_STATUS = [
   { 'hide': 0 },
   { 'show': 1 }
@@ -27,6 +28,30 @@ module.exports = {
     comments: { collection: 'comment', via: 'article_id', through: 'commentarticle' },
     medias: { collection: 'media', via: 'article_id' },
 	},
+
+  seedData: [
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.paragraph(),
+      description: faker.lorem.paragraph(),
+      category_id: faker.random.arrayElement([1,2]),
+      user_id: faker.random.arrayElement([1,2])
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.paragraph(),
+      description: faker.lorem.paragraph(),
+      category_id: faker.random.arrayElement([1,2]),
+      user_id: faker.random.arrayElement([1,2])
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.paragraph(),
+      description: faker.lorem.paragraph(),
+      category_id: faker.random.arrayElement([1,2]),
+      user_id: faker.random.arrayElement([1,2])
+    }
+  ],
 
   beforeCreate: function (values, next) {
     values.created_at = new Date();

@@ -1,3 +1,5 @@
+var faker = require('faker');
+
 module.exports = {
   tableName: 'categories',
   autoPK: true,
@@ -13,15 +15,21 @@ module.exports = {
 
     //Relationship
     articles: { collection: 'article', via: 'category_id' },
+  },
+  seedData: [
+    { title: faker.lorem.sentence() },
+    { title: faker.lorem.sentence() },
+    { title: faker.lorem.sentence() },
+    { title: faker.lorem.sentence() },
+  ],
 
-    beforeCreate: function (values, next) {
-      values.created_at = new Date();
-      next();
-    },
+  beforeCreate: function (values, next) {
+    values.created_at = new Date();
+    next();
+  },
 
-    beforeUpdate: function (values, next) {
-      values.updated_at = new Date();
-      next();
-    }
+  beforeUpdate: function (values, next) {
+    values.updated_at = new Date();
+    next();
   }
 };

@@ -1,3 +1,4 @@
+var faker = require('faker');
 const COMMENT_STATUS = [
   { 'hide': 0 },
   { 'show': 1 }
@@ -19,6 +20,18 @@ module.exports = {
     updated_at: { type: 'datetime' },
     deleted_at: { type: 'datetime' }
   },
+
+  seedData: [
+    {
+      content: faker.lorem.sentence(),
+    },
+    {
+      content: faker.lorem.sentence(),
+    },
+    {
+      content: faker.lorem.sentence(),
+    },
+  ],
 
   beforeCreate: function (values, next) {
     values.created_at = new Date();
