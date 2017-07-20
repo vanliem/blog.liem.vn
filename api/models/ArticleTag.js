@@ -1,9 +1,4 @@
-/**
- * ArticleTag.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
- */
+var faker = require('faker');
 
 module.exports = {
   tableName: 'article_tag',
@@ -14,6 +9,17 @@ module.exports = {
   attributes: {
     article_id: { model: 'article' },
     tag_id: { model: 'tag' }
-  }
+  },
+
+  seedData: [
+    {
+      article_id: faker.random.arrayElement([1,2]),
+      tag_id: faker.random.arrayElement([1,2]),
+    },
+    {
+      article_id: faker.random.arrayElement([1,2]),
+      tag_id: faker.random.arrayElement([1,2]),
+    },
+  ],
 };
 
