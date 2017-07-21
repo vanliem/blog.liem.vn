@@ -8,7 +8,7 @@ module.exports = {
 
   attributes: {
     id: { type: 'integer', primaryKey: true },
-    tag_name: { type: 'string', notNull: true, required: true },
+    name: { type: 'string', notNull: true, required: true },
     created_at: { type: 'datetime', notNull: true },
     updated_at: { type: 'datetime' },
 
@@ -16,10 +16,12 @@ module.exports = {
     articles: { collection: 'article', via: 'tag_id', through: 'articletag' }
   },
   seedData: [
-    { tag_name: faker.lorem.sentence() },
-    { tag_name: faker.lorem.sentence() },
-    { tag_name: faker.lorem.sentence() },
-    { tag_name: faker.lorem.sentence() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
   ],
   beforeCreate: function (values, next) {
     values.created_at = new Date();

@@ -27,22 +27,42 @@ module.exports = {
   seedData: [
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1,2,3]),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user_id: faker.random.arrayElement([1, 2, 3])
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user_id: faker.random.arrayElement([1,2, 3])
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1,2,3]),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user_id: faker.random.arrayElement([1,2, 3])
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1,2,3]),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user_id: faker.random.arrayElement([1,2, 3])
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1,2,3]),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user_id: faker.random.arrayElement([1, 2, 3])
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user_id: faker.random.arrayElement([1,2, 3])
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user_id: faker.random.arrayElement([1,2, 3])
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user_id: faker.random.arrayElement([1,2, 3])
     },
   ],
