@@ -27,7 +27,7 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  //migrate: 'saf' //production
+  //migrate: 'safe', //production
   migrate: 'drop', //development
 
   //Seed data into database
@@ -60,7 +60,6 @@ module.exports.models = {
   seedArray: function (callback) {
     var self = this;
     var modelName = self.adapter.identity.charAt(0).toUpperCase() + self.adapter.identity.slice(1);
-
     self.createEach(self.seedData).exec(function (err, results) {
       if (err) {
         sails.log.debug(err);

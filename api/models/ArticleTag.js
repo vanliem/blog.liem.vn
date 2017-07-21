@@ -13,12 +13,24 @@ module.exports = {
 
   seedData: [
     {
-      article_id: faker.random.arrayElement([1,2]),
-      tag_id: faker.random.arrayElement([1,2]),
+      article_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+      tag_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
     },
     {
-      article_id: faker.random.arrayElement([1,2]),
-      tag_id: faker.random.arrayElement([1,2]),
+      article_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+      tag_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+    },
+    {
+      article_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+      tag_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+    },
+    {
+      article_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+      tag_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+    },
+    {
+      article_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
+      tag_id: faker.random.arrayElement([1,2, 3, 4, 5, 6]),
     },
   ],
 };

@@ -32,25 +32,40 @@ module.exports = {
   seedData: [
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.paragraph(),
+      short_description: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2]),
+      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user: faker.random.arrayElement([1, 2, 3])
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.paragraph(),
+      short_description: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2]),
+      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user: faker.random.arrayElement([1, 2, 3])
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.paragraph(),
+      short_description: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2]),
+      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
       user: faker.random.arrayElement([1, 2, 3])
-    }
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentence(),
+      description: faker.lorem.paragraph(),
+      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user: faker.random.arrayElement([1, 2, 3])
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentence(),
+      description: faker.lorem.paragraph(),
+      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
+      user: faker.random.arrayElement([1, 2, 3])
+    },
+
   ],
 
   beforeCreate: function (values, next) {

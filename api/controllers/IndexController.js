@@ -10,7 +10,7 @@ module.exports = {
           limit: 10,
           sort: 'created_at DESC'
         })
-        .populate('category').populate('user')
+        .populate('category').populate('user').populate('medias')
         .exec(function (err, articles) {
           if (err) {
             return res.serverError(err);
@@ -40,7 +40,7 @@ module.exports = {
         return res.serverError(err);
       }
       return res.view('homepage', {data: results});
-      //res.json(results);
+      //return res.json(results);
     });
   }
 };
