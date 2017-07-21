@@ -1,103 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
 
-	<!-- Basic Page Needs
-	================================================== -->
-	<meta charset="utf-8">
-   <title><%=typeof title == 'undefined' ? 'Blog' : title%></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= typeof title == 'undefined' ? 'Blog' : title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
-
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicon.html">
-	
-	<!-- CSS
-	================================================== -->
-	
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Template styles-->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Responsive styles-->
-	<link rel="stylesheet" href="css/responsive.css">
-	<!-- FontAwesome -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- Animation -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Unite gallery -->
-	<link rel="stylesheet" href="css/unite-gallery.css">
-
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/color.css" type="text/css" />
+  <link rel="stylesheet" href="css/responsive.css" type="text/css" />
 
 </head>
-	
+
 <body>
 
-	<div class="body-inner">
-	
-	<!-- Begin Topbar -->
-	<%- partial('./partials/top_bar.ejs') %>
-	<!--/ Topbar end -->
+<div class="theme-layout">
 
-	<!-- Header start -->
-	<%- partial('./partials/header.ejs') %>
-	<!--/ Header end -->
-	
-	<!-- Navigation start -->
-	<%- partial('./partials/navigation.ejs') %>
-	<!--/ Navigation end -->
+  <!-- Begin Header -->
+  <%- partial('./partials/header.ejs') %>
+  <!-- / End Header -->
 
-	<!-- Carousel -->
-	<%- partial('./partials/carousel.ejs') %>
-	<!--/ Carousel end -->  
-	
-	<!-- Begin Trending -->
-	<%- partial('./partials/trending.ejs') %>
-	<!--/ Trending end -->
+  <!-- Begin responsive header -->
+  <%- partial('./partials/responsive-header.ejs') %>
+  <!-- End responsive header -->
 
-   <!-- Begin Blog -->
-   	<%- body %>
-   <!--/ Blog end -->
+  <section>
+    <div class="gap nogap">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="news-bar"> <span class="news-title">Breaking News</span>
+              <ul class="news-caro">
+                <li><a href="single.html" title="">A Eleven Celebrity Mother-Daughters Who Look Exactly Alike Albucius intellegam scripserit. The best energy given by Milk..</a></li>
+                <li><a href="single.html" title="">A Eleven Celebrity Mother-Daughters Who Look Exactly Alike Albucius intellegam scripserit. The best energy given by Milk..</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--News carousel-->
 
-	<!-- Begin Featured carousel -->
-   	
-	<!--/ Featured carousel end -->
-	
-	<!-- Begin Instagram -->
-	
-	<!-- Instagram end -->
-	
-	<!-- Begin Footer -->
-	<%- partial('./partials/footer.ejs') %>
-	<!-- Footer end -->
-	
-	<!-- Javascript Files
-	================================================== -->
+  <!-- Begin top Featured posts -->
+  <%- partial('./partials/featured.ejs') %>
+  <!-- End top Featured posts -->
 
-	<!-- initialize jQuery Library -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<!-- Bootstrap jQuery -->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<!-- Owl Carousel -->
-	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-	<!-- Unite Gallery -->
-	<script type="text/javascript" src="js/unitegallery.min.js"></script>
-	<script type="text/javascript" src="js/ug-theme-tiles.js"></script>
-	<!-- Template custom -->
-	<script type="text/javascript" src="js/custom.js"></script>
-	
-	</div>
-	<!-- Body inner end -->
+  <%- body %>
+
+  <!-- Begin footer -->
+  <%- partial('./partials/footer.ejs') %>
+  <!-- End footer -->
+
+  <div class="bottom-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright">
+            <h5>All right reserved by <span>WPKixx</span> &copy; 2017</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- bottombar -->
+
+</div><!-- Theme Layout -->
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="js/jquery.js"></script><!-- Jquery -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script><!-- Carousal -->
+<script type="text/javascript" src="js/jquery.scrolly.js"></script>
+<script type="text/javascript" src="js/html5lightbox.js"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.jquery.js"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="js/clock.js"></script><!-- Current time show on topbar plugin -->
+<script src="js/script.js"></script>
 </body>
+
 </html>
