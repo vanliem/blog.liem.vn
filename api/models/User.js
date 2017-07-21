@@ -41,6 +41,20 @@ module.exports = {
       ip: faker.internet.ip()
     },
     {
+      email: faker.internet.email(),
+      full_name: faker.name.findName('Example'),
+      password: 123456,
+      last_login: new Date(),
+      ip: faker.internet.ip()
+    },
+    {
+      email: faker.internet.email(),
+      full_name: faker.name.findName('Example'),
+      password: 123456,
+      last_login: new Date(),
+      ip: faker.internet.ip()
+    },
+    {
       email: 'vanliem2204@gmail.com',
       full_name: 'Le Van Liem',
       password: 123456,

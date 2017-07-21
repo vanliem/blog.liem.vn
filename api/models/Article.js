@@ -3,6 +3,18 @@ const ARTICLE_STATUS = [
   { 'hide': 0 },
   { 'show': 1 }
 ];
+var categoryModel = require('./Category');
+var userModel = require('./User');
+
+var cateIds = [];
+var userIds = [];
+
+for (var i = 1; i <= categoryModel.seedData.length; i++) {
+  cateIds.push(i);
+}
+for (var i = 1; i <= userModel.seedData.length; i++) {
+  userIds.push(i);
+}
 
 module.exports = {
   tableName: 'articles',
@@ -32,38 +44,73 @@ module.exports = {
   seedData: [
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user: faker.random.arrayElement([1, 2, 3])
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user: faker.random.arrayElement([1, 2, 3])
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user: faker.random.arrayElement([1, 2, 3])
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user: faker.random.arrayElement([1, 2, 3])
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
     },
     {
       title: faker.lorem.sentence(),
-      short_description: faker.lorem.sentence(),
-      description: faker.lorem.paragraph(),
-      category: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user: faker.random.arrayElement([1, 2, 3])
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
+    },
+    {
+      title: faker.lorem.sentence(),
+      short_description: faker.lorem.sentences(),
+      description: faker.lorem.lines(),
+      category: faker.random.arrayElement(cateIds),
+      user: faker.random.arrayElement(userIds)
     },
 
   ],

@@ -17,12 +17,11 @@ module.exports = {
     articles: { collection: 'article', via: 'category' },
   },
   seedData: [
-    { title: faker.lorem.word() },
-    { title: faker.lorem.word() },
-    { title: faker.lorem.word() },
-    { title: faker.lorem.word() },
-    { title: faker.lorem.word() },
-    { title: faker.lorem.word() },
+    { title: faker.lorem.words() },
+    { title: faker.lorem.words() },
+    { title: faker.lorem.words() },
+    { title: faker.lorem.words() },
+    { title: faker.lorem.words() },
   ],
 
   beforeCreate: function (values, next) {

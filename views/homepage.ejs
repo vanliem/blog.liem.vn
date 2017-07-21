@@ -5,6 +5,8 @@
         <div class="col-md-8">
           <h4 class="sec-heading strips">grid Posts style</h4>
           <div class="row remove-ext">
+            <% if (data.articles.length > 0 ) { %>
+            <% data.articles.forEach(function (article) { %>
             <div class="col-sm-6">
               <div class="post-grid-style">
                 <a href="single.html" title=""><img src="images/resource/gridpost-tab-1.jpg" alt=""></a>
@@ -17,132 +19,20 @@
                     <li><i class="fa fa-star"></i></li>
                     <li><i class="fa fa-star"></i></li>
                   </ul>
-                  <h2><a href="single.html" title="">The Reasons Why We Love Restaurant</a></h2>
+                  <h2><a href="/articles/<%= article.id %>" title="<%= article.title %>"><%= article.title %></a></h2>
                   <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
+                    <li><i class="fa fa-calendar-o"></i><a href="#" title=""><%= article.created_at %></a></li>
                     <li class="admin"><a href="#" title="">Admin</a></li>
                   </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
+                  <p>
+                    <%= article.short_description %>
+                  </p>
+                  <a href="/articles/<%= article.id %>" class="readmore" title="<%= article.title %>"><i class="fa fa-long-arrow-right"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="post-grid-style">
-                <a href="single.html" title=""><img src="images/resource/gridpost-tab-2.jpg" alt=""></a>
-                <div class="post-detail">
-                  <a class="category" href="#" title="">Health</a>
-                  <ul class="stars-rank">
-                    <li><i class="fa fa-star-half-empty"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
-                  <h2><a href="single.html" title="">Kerala, India: They call it Own Country</a></h2>
-                  <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
-                    <li class="admin"><a href="#" title="">Admin</a></li>
-                  </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="post-grid-style">
-                <a href="single.html" title=""><img src="images/resource/gridpost-tab-3.jpg" alt=""></a>
-                <div class="post-detail">
-                  <a class="category" href="#" title="">Health</a>
-                  <ul class="stars-rank">
-                    <li><i class="fa fa-star-half-empty"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
-                  <h2><a href="single.html" title="">Designer fashion show kicks off Variety</a></h2>
-                  <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
-                    <li class="admin"><a href="#" title="">Admin</a></li>
-                  </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="post-grid-style">
-                <a href="single.html" title=""><img src="images/resource/gridpost-tab-4.jpg" alt=""></a>
-                <div class="post-detail">
-                  <a class="category" href="#" title="">Health</a>
-                  <ul class="stars-rank">
-                    <li><i class="fa fa-star-half-empty"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
-                  <h2><a href="single.html" title="">Things That Make You Love for Works</a></h2>
-                  <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
-                    <li class="admin"><a href="#" title="">Admin</a></li>
-                  </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="post-grid-style">
-                <a href="single.html" title=""><img src="images/resource/gridpost-tab-5.jpg" alt=""></a>
-                <div class="post-detail">
-                  <a class="category" href="#" title="">Health</a>
-                  <ul class="stars-rank">
-                    <li><i class="fa fa-star-half-empty"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
-                  <h2><a href="single.html" title="">7 Stereotypes About Fashion...</a></h2>
-                  <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
-                    <li class="admin"><a href="#" title="">Admin</a></li>
-                  </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="post-grid-style">
-                <a href="single.html" title=""><img src="images/resource/gridpost-tab-6.jpg" alt=""></a>
-                <div class="post-detail">
-                  <a class="category" href="#" title="">Health</a>
-                  <ul class="stars-rank">
-                    <li><i class="fa fa-star-half-empty"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                  </ul>
-                  <h2><a href="single.html" title="">New York Fashion Week the shape</a></h2>
-                  <ul class="post-meta3">
-                    <li><i class="fa fa-calendar-o"></i><a href="#" title="">30 May, 2017</a></li>
-                    <li class="admin"><a href="#" title="">Admin</a></li>
-                  </ul>
-                  <p>Scelerisque at, duis torquent laoreet neque, magna maecenas tortor convallis
-                    aptent pellentesque duis torquent...</p>
-                  <a href="single.html" class="readmore" title=""><i class="fa fa-long-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
+            <% }) %>
+            <% } %>
           </div>
         </div>
         <div class="col-md-4">
@@ -164,19 +54,18 @@
                 </form>
               </div>
             </div><!-- user login -->
+            <% if (data.tags.length > 0) { %>
             <div class="widget">
               <div class="widget-title">
                 <h4>tags cloud</h4>
               </div>
               <ul class="tags-cloud">
-                <li><a href="#" title="">wordpress</a></li>
-                <li><a href="#" title="">Html</a></li>
-                <li><a href="#" title="">css3</a></li>
-                <li><a href="#" title="">jquery</a></li>
-                <li><a href="#" title="">Php</a></li>
-                <li><a href="#" title="">java</a></li>
+                <% data.tags.forEach(function (tag) { %>
+                <li><a href="#" title="<%= tag.name %>"><%= tag.name %></a></li>
+                <% }) %>
               </ul>
             </div><!-- tags cloud -->
+            <% } %>
             <div class="widget">
               <div class="widget-title">
                 <h4>Flickr Feed</h4>
