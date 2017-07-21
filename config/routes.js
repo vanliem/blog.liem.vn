@@ -46,10 +46,12 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  //Homepage
+  'GET /trang-chu': 'Indexcontroller.index',
   //user
-  'POST /post': 'PostController.create',
-  'GET /posts': 'PostController.findAll',
-  'GET /posts/:id': 'PostController.findOne',
-  'DELETE /posts/:id': 'PostController.delete',
-  'PUT /posts/:id': 'PostController.update'
+  'POST /post': 'ArticleController.create',
+  'GET /posts': 'ArticleController.findAll',
+  'GET /posts/:id': 'ArticleController.findOne',
+  'DELETE /posts/:id': 'ArticleController.delete',
+  'PUT /posts/:id': 'ArticleController.update'
 };

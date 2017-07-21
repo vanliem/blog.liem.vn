@@ -20,7 +20,7 @@ module.exports = {
     deleted_at: { type: 'datetime' },
 
     //Relationship
-    articles: { collection: 'article', via: 'user_id'},
+    articles: { collection: 'article', via: 'user'},
     pony: { model: 'author' },
     comments: { collection: 'comment', via: 'user_id', through: 'commentarticle' },
   },

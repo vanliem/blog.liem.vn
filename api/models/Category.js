@@ -14,7 +14,7 @@ module.exports = {
     deleted_at: { type: 'datetime' },
 
     //Relationship
-    articles: { collection: 'article', via: 'category_id' },
+    articles: { collection: 'article', via: 'category' },
   },
   seedData: [
     { title: faker.lorem.sentence() },
