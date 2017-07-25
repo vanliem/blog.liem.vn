@@ -22,6 +22,10 @@ module.exports = {
     { name: faker.lorem.words() },
     { name: faker.lorem.words() },
     { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
+    { name: faker.lorem.words() },
   ],
   beforeCreate: function (values, next) {
     values.created_at = new Date();

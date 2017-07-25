@@ -1,9 +1,20 @@
 var faker = require('faker');
+var articleModel = require('./Article');
+var userModel = require('./User');
+var articleIds = [];
+var userIds = [];
 const MEDIA_TYPE = [
   {image: 0},
   {audio: 1},
   {video: 2},
 ];
+
+for (var i = 1; i <= articleModel.seedData.length; i++) {
+  articleIds.push(i);
+}
+for (var i = 1; i <= userModel.seedData.length; i++) {
+  userIds.push(i);
+}
 
 module.exports = {
   tableName: 'medias',
@@ -27,43 +38,53 @@ module.exports = {
   seedData: [
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1, 2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1, 2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
     {
       path: faker.random.image(),
-      article_id: faker.random.arrayElement([1, 2, 3, 4, 5, 6]),
-      user_id: faker.random.arrayElement([1,2, 3])
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
+    },
+    {
+      path: faker.random.image(),
+      article_id: faker.random.arrayElement(articleIds),
+      user_id: faker.random.arrayElement(userIds)
     },
   ],
 

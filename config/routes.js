@@ -51,7 +51,7 @@ module.exports.routes = {
   //user
   'POST /post': 'ArticleController.create',
   'GET /posts': 'ArticleController.findAll',
-  'GET /posts/:id': 'ArticleController.findOne',
+  'GET /articles/:id': 'ArticleController.findOne',
   'DELETE /posts/:id': 'ArticleController.delete',
   'PUT /posts/:id': 'ArticleController.update'
 };

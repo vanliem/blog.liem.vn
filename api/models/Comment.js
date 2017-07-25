@@ -14,7 +14,7 @@ module.exports = {
   attributes: {
     id: { type: 'integer', primaryKey: true },
     parent_id: { type: 'integer' },
-    content: { type: 'string', notNull: true, required: true },
+    content: { type: 'text', notNull: true, required: true },
     status: { type: 'boolean', defaultsTo: COMMENT_STATUS[0].hide , notNull: true },
     created_at: { type: 'datetime', notNull: true},
     updated_at: { type: 'datetime' },
@@ -23,13 +23,33 @@ module.exports = {
 
   seedData: [
     {
-      content: faker.lorem.sentence(),
+      content: faker.lorem.sentences(),
     },
     {
-      content: faker.lorem.sentence(),
+      content: faker.lorem.sentences(),
     },
     {
-      content: faker.lorem.sentence(),
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
+    },{
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
+    },
+    {
+      content: faker.lorem.sentences(),
     },
   ],
 

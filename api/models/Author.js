@@ -20,7 +20,7 @@ module.exports = {
   seedData: [
     {
       introduction: faker.lorem.paragraph(),
-      user_id: 3
+      user_id: 5
     },
   ],
 
