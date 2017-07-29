@@ -88,7 +88,7 @@ module.exports = {
           return res.serverError(err);
         }
 
-        return res.json(article);
+        return res.view('article/detail', {article: article});
       });
   },
 
